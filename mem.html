@@ -487,18 +487,21 @@
 }
 
 
-    @media (max-width: 768px) {
+ @media (max-width: 768px) {
   .year-buttons {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px; /* مسافة بين الأزرار */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 10px;
   }
 
   .year-buttons button {
-    width: 80%;
+    flex: 1 1 calc(50% - 10px); /* زرين جنب بعض مع مسافة */
+    max-width: calc(50% - 10px);
   }
 }
+
 
   </style>
 </head>
