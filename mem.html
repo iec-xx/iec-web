@@ -525,32 +525,63 @@
     </nav>
 
   <!-- المحتوى -->
-  <div class="container py-5">
-    <div class="year-buttons">
-      <button class="year-btn active" onclick="showYear('2025')">سنة 2024</button>
-      <button class="year-btn" onclick="showYear('2024')">سنة 2025</button>
-    </div>
+<div class="year-buttons">
+  <button class="year-btn active" onclick="showYear('2025')">سنة 2025</button>
+  <button class="year-btn" onclick="showYear('2024')">سنة 2024</button>
+  <button class="year-btn" onclick="showYear('2023')">سنة 2023</button>
+  <button class="year-btn" onclick="showYear('2022')">سنة 2022</button>
+</div>
 
-   <div id="year-2024">
+<!-- سنة 2025 -->
+<div id="year-2025">
   <h2 class="section-title">أعضاء النادي لسنة 2025</h2>
-
   <div class="d-flex justify-content-center align-items-center" style="min-height: 400px;">
     <div class="spinning-wrapper">
       <div class="image-frame">
-        <img src="mem2025.jpg" alt="عضو النادي" class="main-member-img" />
+        <a href="https://www.linkedin.com/in/member2025" target="_blank">
+          <img src="mem2025.jpg" alt="عضو النادي" class="main-member-img" />
+        </a>
       </div>
     </div>
   </div>
 </div>
 
-<div id="year-2025" style="display: none;">
+<!-- سنة 2024 -->
+<div id="year-2024" style="display: none;">
   <h2 class="section-title">أعضاء النادي لسنة 2024</h2>
-
   <div class="d-flex justify-content-center align-items-center" style="min-height: 400px;">
     <div class="spinning-wrapper">
       <div class="image-frame">
-        <a href="https://www.linkedin.com/company/kau-entrepreneurship-club/" target="_blank">
-          <img src="mem2024.jpg" alt="عضو النادي" class="main-member-img" />
+        <a href="https://www.linkedin.com/in/member2024" target="_blank">
+          <img src="24.jpg" alt="عضو النادي" class="main-member-img" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- سنة 2023 -->
+<div id="year-2023" style="display: none;">
+  <h2 class="section-title">أعضاء النادي لسنة 2023</h2>
+  <div class="d-flex justify-content-center align-items-center" style="min-height: 400px;">
+    <div class="spinning-wrapper">
+      <div class="image-frame">
+        <a href="https://www.linkedin.com/in/member2023" target="_blank">
+          <img src="23.jpg" alt="عضو النادي" class="main-member-img" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- سنة 2022 -->
+<div id="year-2022" style="display: none;">
+  <h2 class="section-title">أعضاء النادي لسنة 2022</h2>
+  <div class="d-flex justify-content-center align-items-center" style="min-height: 400px;">
+    <div class="spinning-wrapper">
+      <div class="image-frame">
+        <a href="https://www.linkedin.com/in/member2022" target="_blank">
+          <img src="22.jpg" alt="عضو النادي" class="main-member-img" />
         </a>
       </div>
     </div>
@@ -558,18 +589,18 @@
 </div>
 
 
-      </div>
-    </div>
-  </div>
+<script>
+  function showYear(year) {
+    document.getElementById('year-2025').style.display = (year === '2025') ? 'block' : 'none';
+    document.getElementById('year-2024').style.display = (year === '2024') ? 'block' : 'none';
+    document.getElementById('year-2023').style.display = (year === '2023') ? 'block' : 'none';
+    document.getElementById('year-2022').style.display = (year === '2022') ? 'block' : 'none';
+    
+    document.querySelectorAll('.year-btn').forEach(btn => btn.classList.remove('active'));
+    document.querySelector(`.year-btn[onclick*='${year}']`).classList.add('active');
+  }
+</script>
 
-  <script>
-    function showYear(year) {
-      document.getElementById('year-2024').style.display = (year === '2024') ? 'block' : 'none';
-      document.getElementById('year-2025').style.display = (year === '2025') ? 'block' : 'none';
-      document.querySelectorAll('.year-btn').forEach(btn => btn.classList.remove('active'));
-      document.querySelector(`.year-btn[onclick*='${year}']`).classList.add('active');
-    }
-  </script>
 
   <!-- Footer -->
 <div class="footer">
