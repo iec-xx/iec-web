@@ -170,16 +170,35 @@
       margin-bottom: 30px;
     }
 
-    .year-buttons button {
-      margin: 0 10px;
-      padding: 10px 30px;
-      border-radius: 30px;
-      background-color: #2a266a;
-      border: none;
-      color: white;
-      font-weight: bold;
-      cursor: pointer;
-    }
+   .year-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 10px;
+}
+
+.year-buttons button {
+  flex: 0 0 calc(50% - 10px); /* زرين جنب بعض */
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background-color: #2a266a;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+}
+
+@media (min-width: 769px) {
+  .year-buttons button {
+    flex: unset;
+    margin: 0 10px;
+    width: auto;
+  }
+}
+
 
     .year-buttons button.active {
       background-color: #ECBF5D;
@@ -487,20 +506,6 @@
 }
 
 
- @media (max-width: 768px) {
-  .year-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    padding: 0 10px;
-  }
-
-  .year-buttons button {
-    flex: 1 1 calc(50% - 10px); /* زرين جنب بعض مع مسافة */
-    max-width: calc(50% - 10px);
-  }
-}
 
 
   </style>
